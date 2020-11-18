@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+body {
+  height: 100vh;
+  background-image: url(images/bg-bottom.svg), url(images/bg-top.svg);
+  background-position: bottom left, top right;
+  background-repeat: no-repeat;
+  background-color: hsl(240, 78%, 98%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  color: hsl(233, 13%, 49%);
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  color: hsl(234, 14%, 74%);
+  margin-bottom: 2%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(237, 63%, 64%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  bottom: 5px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: hsl(237, 63%, 64%);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(-15px);
+  -ms-transform: translateX(-15px);
+  transform: translateX(-15px);
+}
+
+.slider:before {
+  border-radius: 50%;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.option {
+  width: 30%;
+  border-radius: 5%;
+  background-color: white;
+  color: hsl(232, 13%, 33%);
+}
+
+.option:hover {
+  transform: scale(1.1);
+}
+
+.pro {
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  color: white;
+}
+
+.pro-button {
+  background-color: white;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 85%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+
+.white-btn {
+  background-color: white;
+  color: hsl(236, 72%, 79%);
+}
+.purple-btn {
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  color: white;
+}
+
+hr {
+  width: 85%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
